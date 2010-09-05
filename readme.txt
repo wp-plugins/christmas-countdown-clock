@@ -8,13 +8,11 @@ Stable tag: 1.0
 
 == Description ==
 
-Christmas countdown clock showing days and hours until Christamas day. Select from several designs, sizes, animations and backgrounds 
+Christmas countdown clock showing days and hours until Christmas day. Select from several designs, sizes, animations and backgrounds 
 
 * Select from a range of designs
-* Select size and layout
-* Select text, border and background colors
-* Select background pictures or animations
-* Full range of events and designs can be seen at [mycountdown.org](http://mycountdown.org/Holiday/Christmas/getwidget/ "Generate your own Christmas Countdown Clocks") 
+* Select size, background colours, pictures or animations
+* Full range of designs can be seen at [mycountdown.org](http://mycountdown.org/Holiday/Christmas/getwidget/ "Generate your own Christmas Countdown Clocks") 
 
 == Installation ==
 
