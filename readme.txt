@@ -41,13 +41,10 @@ Christmas countdown clock showing days and hours until Christmas day. Select fro
 == Frequently Asked Questions ==
 
 = How do I customize the colours? =
-Go to the Appearance->Widgets tab in your wordpress admin panel, and choose click on settings for the countdown clock, select text, border and background colors from the drop downs
-
-= Can I choose my colour? =
-You can select the countdown clock to be transparent, so the countdown's background will be that of your web page
+Go to the Appearance->Widgets tab in your wordpress admin panel, and click on settings for the countdown clock. Select text, border and background colors from the drop downs
 
 = Can I set the time of day and world timezone for the event ? =
-The setting will be available in the next release of the plugin
+The countdowns time is synchronized to GMT+0. Setting exact timezone will be available in the next release of the plugin
 
 = Is there support  ? = 
 Further support is available at [mycountdown.org/support](http://mycountdown.org/wordpress-countdown-clock-plugin/) 
