@@ -2,7 +2,7 @@
 /*
 Plugin Name: Christmas Countdown Clock
 Description: Christmas countdown clock showing days and hours until Christamas day. Select from several designs, sizes, animations and backgrounds 
-Author: mycountdown.org
+Author: enclick
 Version: 1.0
 Author URI: http://mycountdown.org
 Plugin URI: http://mycountdown.org/wordpress-countdown-clock-plugin/
