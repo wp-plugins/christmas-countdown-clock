@@ -51,16 +51,16 @@ function christmas_countdown_clock_init()
            	'countdown' => 'Christmas',
            	'text1' => '',
            	'text2' => '',
-           	'background' => '1',
+           	'background' => '-4',
            	'event_day' => '12',
            	'event_month' => '11',
            	'event_year' => '2010',
            	'size' => '150',
-           	'typeflag' => '3010',
+           	'typeflag' => '3015',
            	'text_color' => '#000000',
            	'border_color' => '#963939',
            	'background_color' => '#FFFFFF',
-           	'timezone' => 'UTC'
+           	'timezone' => 'GMT'
 	   );
 	}
 
