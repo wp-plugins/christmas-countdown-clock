@@ -280,4 +280,43 @@ function ccdc_print_type_list($type){
 
 }
 
+
+// This function print for timezone selector
+
+function ccdc_print_timezone($timezone){
+
+
+	$file_location = dirname(__FILE__)."/dropdown.ser"; 
+	if ($fd = fopen($file_location,'r')){
+		$dropdown_ser = fread($fd,filesize($file_location));
+		fclose($fd);
+	}
+	$dropdown = array();
+	$dropdown = unserialize($dropdown_ser);
+
+	foreach ($dropdown as $tz_line)
+	{
+		$selected = "";
+		if($tz_line['timezone'] == $timezone)
+			$selected = "SELECTED";
+
+		if($tz_line['timezone'] == "UTC"){
+			$tz_line['name'] = "GMT";
+			$tz_line['timezone'] = "UTC";
+		}
+		elseif($tz_line['timezone'] == "Kwajalein")
+			$tz_line['UTCoffset'] = "-12:00";
+
+		if($tz_line['UTCoffset'] == "+00:00") 
+			$tz_line['UTCoffset'] = "(UTC)";
+		else
+			$tz_line['UTCoffset'] = "(UTC " . $tz_line['UTCoffset'] . ")";
+
+		echo '<option value="'. $tz_line['timezone'].'" '.$selected . '>'.$tz_line['UTCoffset']." ".$tz_line['name']."</option>";
+		echo "\n";
+	}
+
+}
+
+
 ?>

@@ -2,8 +2,8 @@
 /*
 Plugin Name: Christmas Countdown Clock
 Description: Christmas countdown clock showing days and hours until Christamas day. Select from several designs, sizes, animations and backgrounds 
-Author: mycountdown.org
-Version: 1.0
+Author: enclick
+Version: 1.1
 Author URI: http://mycountdown.org
 Plugin URI: http://mycountdown.org/wordpress-countdown-clock-plugin/
 */
@@ -59,7 +59,8 @@ function christmas_countdown_clock_init()
            	'typeflag' => '3010',
            	'text_color' => '#000000',
            	'border_color' => '#963939',
-           	'background_color' => '#FFFFFF'
+           	'background_color' => '#FFFFFF',
+           	'timezone' => 'UTC'
 	   );
 	}
 
@@ -83,6 +84,7 @@ function christmas_countdown_clock_init()
               $newoptions['text_color'] = strip_tags(stripslashes($_POST['christmas-countdown-clock-text-color']));
               $newoptions['border_color'] = strip_tags(stripslashes($_POST['christmas-countdown-clock-border-color']));
               $newoptions['background_color'] = strip_tags(stripslashes($_POST['christmas-countdown-clock-background-color']));
+              $newoptions['timezone'] = strip_tags(stripslashes($_POST['christmas-countdown-clock-timezone']));
         }
 
 
@@ -110,6 +112,7 @@ function christmas_countdown_clock_init()
       	$text_color = htmlspecialchars($options['text_color'], ENT_QUOTES);
       	$border_color = htmlspecialchars($options['border_color'], ENT_QUOTES);
       	$background_color = htmlspecialchars($options['background_color'], ENT_QUOTES);
+      	$timezone = htmlspecialchars($options['timezone'], ENT_QUOTES);
 
       	echo '<ul><li style="text-align:center;list-style: none;"><label for="christmas-countdown-clock-title">Christmas Countdown Clock<br> by <a href="http://mycountdown.org">mycountdown.org</a></label></li>';
 
@@ -205,8 +208,12 @@ function christmas_countdown_clock_init()
       	echo '</select></label>';
       	echo '</li>';
 
-
-
+      	// Set TIMEZONE
+      	echo '<li style="list-style: none;"><label for="christmas-countdown-clock-timezone">'.'Timezone:&nbsp;';
+       	echo '<select id="christmas-countdown-clock-timezone" name="christmas-countdown-clock-timezone"  style="width:150px" >';
+      	ccdc_print_timezone($timezone);
+      	echo '</select></label>';
+      	echo '</li>';
 
 
 	//   Transparent option
@@ -288,13 +295,14 @@ function christmas_countdown_clock_init()
       	$text_color = htmlspecialchars($options['text_color'], ENT_QUOTES);
       	$border_color = htmlspecialchars($options['border_color'], ENT_QUOTES);
       	$background_color = htmlspecialchars($options['background_color'], ENT_QUOTES);
+      	$timezone = htmlspecialchars($options['timezone'], ENT_QUOTES);
 
 	$new_countdown_date = $event_year ."-" . $event_month . "-" . $event_day;
 
 	if(empty($event_day) || empty($event_month) || empty($event_year) )
 		$event_time = date('U',time()+3600*24*300);
 	else{
-		$dateTimeZoneUTC = new DateTimeZone("UTC");
+		$dateTimeZoneUTC = new DateTimeZone($timezone);
         	$new_dateTimeUTC = new DateTime($new_countdown_date, $dateTimeZoneUTC);
  		$event_time =   $new_dateTimeUTC->format('U') ;
 	}
@@ -326,6 +334,11 @@ function christmas_countdown_clock_init()
 	$widget_call_string .= '&widget_number='.$typeflag;
 	$widget_call_string .= '&text1='.$text1;
 	$widget_call_string .= '&text2='.$text2;
+
+	if(empty($timezone))
+		$timezone= "UTC";
+
+	$widget_call_string .= '&timezone='.$timezone;
 
 	$lgroup = strtolower($group);
 	if($lgroup == "special+day" || $lgroup == "my+countdown" || $lgroup == "event")
