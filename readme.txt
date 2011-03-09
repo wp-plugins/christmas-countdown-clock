@@ -50,7 +50,8 @@ Christmas countdown clock showing days and hours until Christmas day. Select fro
 Go to the Appearance->Widgets tab in your wordpress admin panel, and click on settings for the countdown clock. Select text, border and background colors from the drop downs
 
 = Can I set the time of day and world timezone for the event ? =
-The countdowns time is synchronized to GMT+0. Setting exact timezone will be available in the next release of the plugin
+Yes, select from the timezone dropdown the time zone in your area
+
 
 = Is there support  ? = 
 Further support is available at [mycountdown.org/support](http://mycountdown.org/wordpress-countdown-clock-plugin/) 
