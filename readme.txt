@@ -1,7 +1,7 @@
 === Christmas Countdown Clock ===
 Contributors: enclick
 Donate link: http://www.mycountdown.org/Holiday/Christmas/
-Tags: christmas countdown, flash christmas countdown, christmas countdown clock, christmas countdown widget, chritmas countdown generator, christmas countdown ticker, days till christmas
+Tags: christmas countdown, xmas, flash christmas count down, christmas countdown clock, christmas countdown widget, chritmas countdown generator, christmas countdown ticker, days till christmas
 Tested up to: 3.0.9
 Requires at least: 1.5
 Stable tag: 1.1
