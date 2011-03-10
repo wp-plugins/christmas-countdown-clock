@@ -337,8 +337,8 @@ function christmas_countdown_clock_init()
 
 	if(empty($timezone))
 		$timezone= "UTC";
-	else
-		$widget_call_string .= '&timezone='.$timezone;
+
+	$widget_call_string .= '&timezone='.$timezone;
 
 	$lgroup = strtolower($group);
 	if($lgroup == "special+day" || $lgroup == "my+countdown" || $lgroup == "event")
