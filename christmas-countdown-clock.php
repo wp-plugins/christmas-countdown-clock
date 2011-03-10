@@ -302,7 +302,7 @@ function christmas_countdown_clock_init()
 	if(empty($event_day) || empty($event_month) || empty($event_year) )
 		$event_time = date('U',time()+3600*24*300);
 	else{
-		$dateTimeZoneUTC = new DateTimeZone($timezone);
+		$dateTimeZoneUTC = new DateTimeZone("UTC");
         	$new_dateTimeUTC = new DateTime($new_countdown_date, $dateTimeZoneUTC);
  		$event_time =   $new_dateTimeUTC->format('U') ;
 	}
@@ -337,8 +337,8 @@ function christmas_countdown_clock_init()
 
 	if(empty($timezone))
 		$timezone= "UTC";
-
-	$widget_call_string .= '&timezone='.$timezone;
+	else
+		$widget_call_string .= '&timezone='.$timezone;
 
 	$lgroup = strtolower($group);
 	if($lgroup == "special+day" || $lgroup == "my+countdown" || $lgroup == "event")
