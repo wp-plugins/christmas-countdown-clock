@@ -18,9 +18,11 @@ Christmas countdown clock showing days and hours until Christmas day. Select fro
 
 1. Download the zip file and extract the contents,
 2. Upload the folder `christmas-countdown-clock` to your WP plugin folder `/wp-content/plugins/` directory,
-3. Go to Plugins > Installed, and activate the plugin,
+3. Go to Plugins > Plugins, and activate the plugin,
 4. Go to Appearance > Widgets, and drag the widget to a sidebar,
 5. Select the countdown type, size, colors, or background from the setting menu
+6. Send us and email with any problems to widgets at mycountdown.org, we will make efforst to solve the problem
+7. Please rate our plugin!
 
 == Screenshots ==
 
@@ -55,3 +57,6 @@ Yes, select from the timezone dropdown the time zone in your area
 
 = Is there support  ? = 
 Further support is available at [mycountdown.org/support](http://mycountdown.org/wordpress-countdown-clock-plugin/) 
+
+= Email & Twitter = 
+Email us to widgets at mycountdown.org or [twitter.com/mycountdown](http://twitter.com/mycountdown)
