@@ -54,6 +54,8 @@ Go to the Appearance->Widgets tab in your wordpress admin panel, and click on se
 = Can I set the time of day and world timezone for the event ? =
 Yes, select from the timezone dropdown the time zone in your area
 
+= Can I paste the countdown onto my page on a post, rather than a sidebar =
+Yes, the javascript code is available directly from  [mycountdown.org/christmas](http://mycountdown.org/Holiday/Christmas/getwidget/ "All the countdowns in the world"). You must paste the javascript into the page editor in HTML mode.
 
 = Is there support  ? = 
 Further support is available at [mycountdown.org/support](http://mycountdown.org/wordpress-countdown-clock-plugin/) 
