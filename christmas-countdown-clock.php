@@ -45,6 +45,7 @@ function christmas_countdown_clock_init()
 			$newoptions = array(
 				'title'=>'Christmas Countdown',
 				'transparentflag'=>'0', 
+				'titleflag'=>'0', 
 				'group' => 'Holiday',
 				'countdown' => 'Christmas',
 				'text1' => '',
@@ -112,7 +113,7 @@ function christmas_countdown_clock_init()
       	$background_color = htmlspecialchars($options['background_color'], ENT_QUOTES);
       	$timezone = htmlspecialchars($options['timezone'], ENT_QUOTES);
 
-      	echo '<ul><li style="text-align:center;list-style: none;"><label for="christmas-countdown-clock-title">Christmas Countdown Clock</label></li>';
+      	echo '<ul>';
 
        	// Get group
 
