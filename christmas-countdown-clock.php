@@ -311,7 +311,7 @@ function christmas_countdown_clock_init()
 
 
 		// Output title
-		echo $before_title . $title . $after_title; 
+		echo $before_title . $after_title; 
 
 
 		// Output Clock
