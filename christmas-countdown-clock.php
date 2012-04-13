@@ -1,7 +1,7 @@
 <?php
 /*
   Plugin Name: Christmas Countdown Clock
-  Description: Christmas countdown clock showing days and hours until Christamas day. Select from several designs, sizes, animations and backgrounds 
+  Description: Christmas countdown clock showing days and hours until Christmas day. Select from several designs, sizes, animations and backgrounds 
   Author: enclick
   Version: 1.1
   Author URI: http://mycountdown.org
